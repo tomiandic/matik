@@ -4,6 +4,8 @@ import FloatingCardList from "../components/FloatingCardList";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import gsap from "gsap";
+import Image from "next/image";
+import dash1 from "@/assets/decorations/dash1.svg";
 
 const Landing = () => {
   const landingContainer = useRef(null);
@@ -73,8 +75,14 @@ const Landing = () => {
   return (
     <div
       ref={landingContainer}
-      className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen pt-10 pb-20 gap-16 landing-container bg-[radial-gradient(at_100%_100%,_hsla(217,_100%,_88%,_1)_0px,_transparent_50%),_radial-gradient(at_0%_100%,_hsla(226,_100%,_91%,_1)_0px,_transparent_50%)]"
+      className="grid relative grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen pt-10 pb-20 gap-16 landing-container bg-[radial-gradient(at_100%_100%,_hsla(217,_100%,_88%,_1)_0px,_transparent_50%),_radial-gradient(at_0%_100%,_hsla(226,_100%,_91%,_1)_0px,_transparent_50%)]"
     >
+      <Image
+        width="100%"
+        alt="dash line"
+        src={dash1}
+        className="absolute bottom-3 left-0"
+      />
       <main className="flex flex-col gap-8 row-start-2 items-center px-4">
         <h1 className="text-3xl -mt-5 md:text-5xl text-slate-800 font-semibold text-center w-[100%] max-w-[1005px] leading-normal md:leading-relaxed landing-main-title transparent-element">
           Profesionalne usluge
