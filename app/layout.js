@@ -2,6 +2,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import { ReactLenis } from "lenis/react";
 import Navigation from "@/components/Navigation";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   title: "Matik",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
           {children}
         </body>
       </ReactLenis>
+      <GoogleAnalytics gaId="G-QWCQ5BPNB3" />
     </html>
   );
 }
