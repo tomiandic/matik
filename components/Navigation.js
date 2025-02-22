@@ -26,11 +26,7 @@ const Navigation = () => {
       <div className="sticky top-0 left-0 h-13 md:h-20 flex items-center px-4 md:px-24 backdrop-blur-md w-full z-10">
         <div className="col-auto col-sm-6 col-lg-2 me-auto ps-lg-0 text-2xl">
           <Link aria-label="header logo" className="flex items-center" href="/">
-            <Image
-              alt="logo image"
-              src={logoImg}
-              className="w-20 md:w-28 pb-3"
-            />
+            <Image alt="logo image" src={logoImg} className="w-24 md:w-36" />
           </Link>
         </div>
         <nav className="col-auto col-lg-10 d-none d-lg-block">

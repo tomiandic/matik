@@ -17,9 +17,9 @@ export default function BentoBox() {
             <div className="absolute inset-px rounded-lg bg-slate-100 lg:rounded-l-[2rem]"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                <h3 className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Šivanje
-                </p>
+                </h3>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Nudimo profesionalne usluge šivanja i krojenja po mjeri,
                   prilagođene vašim željama i potrebama. Bilo da se radi o
@@ -43,9 +43,9 @@ export default function BentoBox() {
             <div className="absolute inset-px rounded-lg bg-secondary max-lg:rounded-t-[2rem]"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10 z-5 min-h-64">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center max-lg:max-w-[80%] max-lg:mr-auto">
+                <h3 className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center max-lg:max-w-[80%] max-lg:mr-auto">
                   Sužavanje i širenje
-                </p>
+                </h3>
                 <p className="mt-2 text-sm/6 text-slate-800 max-lg:text-center max-w-[60%] max-lg:max-w-[80%] max-lg:mr-auto">
                   Prilagođavamo odjevne komade sužavanjem ili proširivanjem kako
                   bi savršeno pristajali vašoj figuri.
@@ -68,9 +68,9 @@ export default function BentoBox() {
             <div className="absolute inset-px rounded-lg bg-main"></div>
             <div className="relative flex h-full flex-col rounded-[calc(var(--radius-lg)+1px)] min-h-56">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg font-medium tracking-tight text-right text-white max-lg:text-center max-lg:w-[70%] max-lg:ml-auto">
+                <h3 className="mt-2 text-lg font-medium tracking-tight text-right text-white max-lg:text-center max-lg:w-[70%] max-lg:ml-auto">
                   Skraćivanje
-                </p>
+                </h3>
                 <p className="mt-2 max-w-lg text-sm/6 text-white text-right w-2/3 ml-auto max-lg:text-center max-lg:ml-auto">
                   Bilo da se radi o hlačama, suknjama ili rukavima, osiguravamo
                   uredne i profesionalne završetke.
@@ -93,9 +93,9 @@ export default function BentoBox() {
             <div className="absolute inset-px rounded-lg bg-slate-100 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                <h3 className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Popravak odjeće
-                </p>
+                </h3>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Vršimo sve vrste popravaka odjeće bilo da se radi o zamjeni
                   patentnog zatvarača, krpanju rupa ili učvršćivanju šavova,
