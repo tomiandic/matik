@@ -22,7 +22,7 @@ export default function BentoBox() {
                 </h3>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Nudimo profesionalne usluge šivanja i krojenja po mjeri,
-                  prilagođene vašim željama i potrebxxxama. Bilo da se radilo
+                  prilagođene vašim željama i potrebama. Bilo da se radilo
                   prepravcima, popravcima ili izradi potpuno novih odjevnih
                   komada, garantiramo preciznost i kvalitetu.
                 </p>
@@ -46,7 +46,7 @@ export default function BentoBox() {
                 <h3 className="mt-2 text-lg font-medium tracking-tight text-gray-950  max-lg:max-w-[80%] max-lg:mr-auto">
                   Sužavanje i širenje
                 </h3>
-                <p className="mt-2 text-sm/6 text-slate-800 max-w-[60%] max-lg:max-w-[80%] max-lg:mr-auto">
+                <p className="mt-2 text-sm/6 text-slate-800 max-w-[60%] max-lg:max-w-[65%] max-lg:mr-auto">
                   Prilagođavamo odjevne komade sužavanjem ili proširivanjem kako
                   bi savršeno pristajali vašoj figuri.
                 </p>

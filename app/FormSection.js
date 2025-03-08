@@ -73,7 +73,7 @@ const FormContainer = () => {
   return (
     <section
       id="contact-form"
-      className="items-start justify-items-center min-h-[85vh] p-8 pb-10 sm:py-28 relative bg-[radial-gradient(at_100%_100%,_hsla(22,_100%,_88%,_1)_0px,_transparent_50%),_radial-gradient(at_0%_100%,_hsla(251,_100%,_91%,_1)_0px,_transparent_50%)]"
+      className="items-start flex justify-center min-h-[85vh] p-8 pb-10 sm:py-28 relative bg-[radial-gradient(at_100%_100%,_hsla(22,_100%,_88%,_1)_0px,_transparent_50%),_radial-gradient(at_0%_100%,_hsla(251,_100%,_91%,_1)_0px,_transparent_50%)]"
     >
       <div
         ref={contactContainer}
