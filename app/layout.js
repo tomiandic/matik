@@ -19,12 +19,12 @@ export const metadata = {
   openGraph: {
     title: "Najbolja Šivaonica u Puli | Kvalitetne Usluge Šivanja",
     description:
-      "Profesionalne usluge šivanja u Puli - krojenje, popravke i unikatni tekstilni proizvodi. Kontaktirajte nas!",
-    url: "https://primjer-stranice.com",
+      "Profesionalne usluge šivanja u Puli - krojenje, popravci i unikatni tekstilni proizvodi. Kontaktirajte nas!",
+    url: "https://matik.hr",
     type: "website",
     images: [
       {
-        url: "https://primjer-stranice.com/slika.jpg",
+        url: "https://images.pexels.com/photos/2973392/pexels-photo-2973392.jpeg",
         width: 1200,
         height: 630,
         alt: "Šivaonica u Puli",
