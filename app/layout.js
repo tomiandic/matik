@@ -5,14 +5,31 @@ import Navigation from "@/components/Navigation";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
-  title: "Matik",
-  description: "Matik obrt za šivanje i krojačke usluge",
+  title: "Matik - Krojački obrt u Puli",
+  description:
+    "Matik krojački obrt u Puli. Profesionalne usluge šivanja! Nudimo krojenje, popravke i izradu unikatnih tekstilnih proizvoda. Kvaliteta, preciznost i brza isporuka. Kontaktirajte nas danas",
+  keywords:
+    "šivanje, krojenje, popravci odjeće, tekstilni proizvodi, Pula, šivaonica, krojački obrt",
   icons: {
     icon: "/favicon.ico",
-    appleTouchIcon: "/apple-touch-icon.png",
-    androidChrome: "/android-chrome-192x192.png",
-    favicon32: "/favicon-32x32.png",
-    favicon16: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+    android: "/android-chrome-192x192.png",
+    shortcut: "/favicon-32x32.png",
+  },
+  openGraph: {
+    title: "Najbolja Šivaonica u Puli | Kvalitetne Usluge Šivanja",
+    description:
+      "Profesionalne usluge šivanja u Puli - krojenje, popravke i unikatni tekstilni proizvodi. Kontaktirajte nas!",
+    url: "https://primjer-stranice.com",
+    type: "website",
+    images: [
+      {
+        url: "https://primjer-stranice.com/slika.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Šivaonica u Puli",
+      },
+    ],
   },
 };
 
@@ -31,7 +48,7 @@ export default function RootLayout({ children }) {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Matik, krojački obrt u Puli",
-            "description": "Krojački popravci u Puli specijaliziran za sve vrste krojačkih popravaka. Bilo da trebate prepravke, skraćivanje ili sužavanje kod nas ćete pronaći preciznost, kvalitetu i brzinu.",
+            "description": "Krojački obrt u Puli specijaliziran za sve vrste krojačkih popravaka. Bilo da trebate prepravke, skraćivanje ili sužavanje kod nas ćete pronaći preciznost, kvalitetu i brzinu.",
             "image": "https://images.pexels.com/photos/2973392/pexels-photo-2973392.jpeg",
             "address": {
               "@type": "PostalAddress",

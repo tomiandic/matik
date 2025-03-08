@@ -1,17 +1,18 @@
-import logoImage from "@/assets/logo.svg";
+import logoImage from "@/assets/logo_white.svg";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6 ">
+    <footer className="bg-gray-900 text-white py-20">
       <div className="container h-80 mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">
         {/* Logo Placeholder */}
         <div className="mb-4 md:mb-0">
           <div className="flex items-center space-x-2">
-            <div className="h-10 w-36 rounded-full flex items-center justify-center">
+            <div className="h-10 w-36 rounded-full flex items-center justify-center flex-col">
               <span className="text-lg font-bold">
                 <Image src={logoImage} alt="matik logo" />
               </span>
+              <p className="text-xs mt-2 opacity-70">KROJAČKI OBRT</p>
             </div>
           </div>
         </div>
