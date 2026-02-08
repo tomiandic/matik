@@ -32,7 +32,7 @@ const Landing = () => {
         defaults: { duration: 1, ease: "power1.inOut" },
       });
 
-      tl.fromTo(
+      (tl.fromTo(
         mainTitleChunks.words,
         {
           y: 60,
@@ -44,7 +44,7 @@ const Landing = () => {
             each: 0.02,
             from: "random",
           },
-        }
+        },
       ),
         tl.fromTo(
           mainSubtitleChunks.lines,
@@ -57,7 +57,7 @@ const Landing = () => {
             y: 0,
             stagger: 0.2,
           },
-          "-=0.65"
+          "-=0.65",
         ),
         tl.fromTo(
           ".floating-card",
@@ -68,10 +68,10 @@ const Landing = () => {
             opacity: 1,
             stagger: 0.07,
           },
-          "-=0.9"
-        );
+          "-=0.9",
+        ));
     },
-    { scope: landingContainer }
+    { scope: landingContainer },
   );
 
   return (

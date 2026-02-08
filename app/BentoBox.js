@@ -1,5 +1,5 @@
 import Image from "next/image";
-import sewingMachine from "@/assets/images/sew_machine.png";
+import sewingMachine from "@/assets/images/sewing_machine.png";
 import tailor from "@/assets/images/tailor.png";
 import trausers from "@/assets/images/trousers.png";
 import tailorTools from "@/assets/images/tailorToolss.png";
@@ -27,7 +27,7 @@ export default function BentoBox() {
                   komada, garantiramo preciznost i kvalitetu.
                 </p>
               </div>
-              <div className="@container relative min-h-[20rem] w-full grow ">
+              <div className="@container relative min-h-[14rem] w-full grow ">
                 <div className="absolute -bottom-16 inset-5 overflow-hidden">
                   <Image
                     className="size-full object-contain object-bottom"

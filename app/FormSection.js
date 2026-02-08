@@ -59,15 +59,15 @@ const FormContainer = () => {
       timeline.fromTo(
         ".path-1",
         { strokeDashoffset: 772.2296142578125 },
-        { strokeDashoffset: 0, duration: 1 }
+        { strokeDashoffset: 0, duration: 1 },
       );
       timeline.fromTo(
         ".path-2",
         { strokeDashoffset: 102.12936401367188 },
-        { strokeDashoffset: 0 }
+        { strokeDashoffset: 0 },
       );
     },
-    { scope: contactContainer }
+    { scope: contactContainer },
   );
 
   return (
@@ -181,7 +181,7 @@ const FormContainer = () => {
 
             {formMessage.sent === false && (
               <div
-                class=" mt-4 flex items-center p-4 mb-4 text-sm border-red-300 border text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400"
+                class="mt-4 flex items-center p-4 mb-4 text-sm border-red-300 border text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400"
                 role="alert"
               >
                 <svg
