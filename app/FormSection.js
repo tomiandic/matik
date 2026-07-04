@@ -153,11 +153,11 @@ const FormContainer = () => {
               />
             </div>
             <div className="mt-9 mb-7">
-              <InputField name="message" label="Upit" />
+              <InputField name="message" label="Upit" textarea />
             </div>
             <div className="flex justify-between">
               <p className="text-xs text-slate-500 mr-6">
-                *Tipično se javljamo unutar 48 sati nakon slanja upita
+                *Nastojimo se javiti unutar 48 sati od slanja upita
               </p>
               {formMessage.sent ? (
                 <div className="flex items-center text-main">
