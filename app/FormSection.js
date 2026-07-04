@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LuCheck } from "react-icons/lu";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useLanguage } from "@/context/LanguageContext";
 
 const FormContainer = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,6 +15,7 @@ const FormContainer = () => {
   const contactContainer = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [formMessage, setFormMessage] = useState({});
+  const { t } = useLanguage();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,10 +31,10 @@ const FormContainer = () => {
       body: JSON.stringify(formObject),
     });
     if (res.ok) {
-      setFormMessage({ sent: true, message: "Poslano!" });
+      setFormMessage({ sent: true, message: t("form.success") });
       e.target.reset();
     } else {
-      setFormMessage({ sent: false, message: "Slanje poruke nije uspjelo" });
+      setFormMessage({ sent: false, message: t("form.error") });
     }
     setIsLoading(false);
   };
@@ -73,7 +75,7 @@ const FormContainer = () => {
   return (
     <section
       id="contact-form"
-      className="items-start flex justify-center min-h-[85vh] p-8 pb-10 sm:py-28 relative bg-[radial-gradient(at_100%_100%,_hsla(22,_100%,_88%,_1)_0px,_transparent_50%),_radial-gradient(at_0%_100%,_hsla(251,_100%,_91%,_1)_0px,_transparent_50%)]"
+      className="items-start flex justify-center min-h-[85vh] p-8 pb-10 sm:py-28 relative bg-[radial-gradient(at_100%_100%,_hsla(22,_100%,_88%,_1)_0px,_transparent_50%),_radial-gradient(at_0%_100%,_hsla(15,_100%,_91%,_1)_0px,_transparent_50%)]"
     >
       <div
         ref={contactContainer}
@@ -81,14 +83,9 @@ const FormContainer = () => {
       >
         <div className="max-w-[550px] mr-16 flex-1">
           <h2 className="text-3xl mt-6 mb-6 xl:text-3xl font-medium">
-            <span className="text-main">Ispunite formu</span> i mi ćemo vas
-            kontaktirati
+            <span className="text-main">{t("form.heading1")}</span>{" "}
+            {t("form.heading2")}
           </h2>
-          {/*  <Image
-              src={arrowDecoration}
-              className="w-48 ml-32 -mt-6 hidden md:block"
-              alt="arrow decoration"
-            /> */}
           <svg
             width="343"
             height="263"
@@ -124,10 +121,8 @@ const FormContainer = () => {
               </linearGradient>
             </defs>
           </svg>
-          <p className="text-lg text-slate-800 hidden md:visible">
-            52100 Pula,
-            <br />
-            Caprinov prilaz 18
+          <p className="text-lg text-slate-800 hidden md:visible whitespace-pre-line">
+            {t("form.address")}
           </p>
           <p className="text-lg text-slate-800 mt-4 hidden md:visible">
             info@matik.com
@@ -136,28 +131,41 @@ const FormContainer = () => {
         <div className="flex-1 md:ml-4 max-w-md">
           <form onSubmit={handleSubmit}>
             <div className="mt-9">
-              <InputField name="name" label="Puno Ime*" required />
+              <InputField name="name" label={t("form.name")} required />
             </div>
 
-            <InputField name="lastName" label="Prezime" className="hidden" />
+            <InputField
+              name="lastName"
+              label={t("form.lastName")}
+              className="hidden"
+            />
 
             <div className="mt-9">
-              <InputField name="email" type="email" label="Email*" required />
+              <InputField
+                name="email"
+                type="email"
+                label={t("form.emailLabel")}
+                required
+              />
             </div>
             <div className="mt-9">
               <InputField
                 name="tel"
                 type="phone"
-                label="Broj telefona*"
+                label={t("form.phone")}
                 required
               />
             </div>
             <div className="mt-9 mb-7">
-              <InputField name="message" label="Upit" textarea />
+              <InputField
+                name="message"
+                label={t("form.message")}
+                textarea
+              />
             </div>
             <div className="flex justify-between">
               <p className="text-xs text-slate-500 mr-6">
-                *Nastojimo se javiti unutar 48 sati od slanja upita
+                {t("form.note")}
               </p>
               {formMessage.sent ? (
                 <div className="flex items-center text-main">
@@ -173,7 +181,7 @@ const FormContainer = () => {
                   {isLoading ? (
                     <AiOutlineLoading className="animate-spin w-11 h-5" />
                   ) : (
-                    "Pošalji"
+                    t("form.submit")
                   )}
                 </Button>
               )}
@@ -181,11 +189,11 @@ const FormContainer = () => {
 
             {formMessage.sent === false && (
               <div
-                class="mt-4 flex items-center p-4 mb-4 text-sm border-red-300 border text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400"
+                className="mt-4 flex items-center p-4 mb-4 text-sm border-red-300 border text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400"
                 role="alert"
               >
                 <svg
-                  class="shrink-0 inline w-4 h-4 me-3"
+                  className="shrink-0 inline w-4 h-4 me-3"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -193,7 +201,7 @@ const FormContainer = () => {
                 >
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
                 </svg>
-                <span class="sr-only">Info</span>
+                <span className="sr-only">Info</span>
                 <div>{formMessage.message}</div>
               </div>
             )}

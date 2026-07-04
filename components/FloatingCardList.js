@@ -5,38 +5,48 @@ import paletteIcon from "@/assets/icons/palette.svg";
 import timeIcon from "@/assets/icons/timer.svg";
 import professionalIcon from "@/assets/icons/safe.svg";
 import needleIcon from "@/assets/icons/needle.svg";
+import { useLanguage } from "@/context/LanguageContext";
 
-const FLOATING_CARDS = [
-  {
-    color: "#ebfaff",
-    icon: needleIcon,
-    title: "Profesionalnost",
-    style: { transform: "translate(20vw, 32vh) rotate(-5deg)" },
-  },
-  {
-    color: "#ffede1",
-    icon: timeIcon,
-    title: "Brzina",
-    style: { transform: "translate(-15vw, -35vh) rotate(-5deg)" },
-  },
-  {
-    color: "#f7f3ff",
-    icon: professionalIcon,
-    title: "Pouzdanost",
-    style: { transform: "translate(20vw, -35vh) rotate(5deg)" },
-  },
-  {
-    color: "#f3f8ff",
-    icon: paletteIcon,
-    title: "Temeljitost",
-    style: { transform: "translate(-12vw,26vh) rotate(5deg)" },
-  },
-];
+const cardStyles = {
+  professionalism: { transform: "translate(20vw, 32vh) rotate(-5deg)" },
+  speed: { transform: "translate(-15vw, -35vh) rotate(-5deg)" },
+  reliability: { transform: "translate(20vw, -35vh) rotate(5deg)" },
+  thoroughness: { transform: "translate(-12vw,26vh) rotate(5deg)" },
+};
 
 function FloatingCardList() {
+  const { t } = useLanguage();
+
+  const cards = [
+    {
+      color: "#fdf2f4",
+      icon: needleIcon,
+      title: t("floatingCards.professionalism"),
+      style: cardStyles.professionalism,
+    },
+    {
+      color: "#fef3ec",
+      icon: timeIcon,
+      title: t("floatingCards.speed"),
+      style: cardStyles.speed,
+    },
+    {
+      color: "#f7f4f4",
+      icon: professionalIcon,
+      title: t("floatingCards.reliability"),
+      style: cardStyles.reliability,
+    },
+    {
+      color: "#fef9f5",
+      icon: paletteIcon,
+      title: t("floatingCards.thoroughness"),
+      style: cardStyles.thoroughness,
+    },
+  ];
+
   return (
     <div>
-      {FLOATING_CARDS.map((card) => (
+      {cards.map((card) => (
         <div style={card.style} key={card.title} className="floating-card">
           <FloatingCard {...card} />
         </div>

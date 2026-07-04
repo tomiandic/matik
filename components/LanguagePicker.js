@@ -6,24 +6,23 @@ import croatianIcon from "@/assets/icons/languages/croatian.svg";
 import englishIcon from "@/assets/icons/languages/english.svg";
 import germanIcon from "@/assets/icons/languages/german.svg";
 import italianIcon from "@/assets/icons/languages/italian.svg";
-import slovenianIcon from "@/assets/icons/languages/slovenian.svg";
-import Image from "next/image";
 
-const LanguagePicker = ({ onLanguageChange }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState("hr");
+import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+
+const LanguagePicker = () => {
+  const { language, setLanguage } = useLanguage();
   const [isLanguagePickerOpen, setIsLanguagePickerOpen] = useState(false);
 
   const languages = [
     { code: "en", name: "English", icon: englishIcon },
     { code: "de", name: "German", icon: germanIcon },
     { code: "it", name: "Italian", icon: italianIcon },
-    { code: "si", name: "Slovenian", icon: slovenianIcon },
     { code: "hr", name: "Croatian", icon: croatianIcon },
   ];
 
   const handleLanguageChange = (code) => {
-    setSelectedLanguage(code);
-    if (onLanguageChange) onLanguageChange(code);
+    setLanguage(code);
     setIsLanguagePickerOpen(false);
   };
 
@@ -39,7 +38,7 @@ const LanguagePicker = ({ onLanguageChange }) => {
           <Image
             width={20}
             style={{ borderRadius: 3 }}
-            src={languages.find((lang) => lang.code === selectedLanguage)?.icon}
+            src={languages.find((lang) => lang.code === language)?.icon}
             alt="Language flag"
           />
         </span>

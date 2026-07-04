@@ -11,6 +11,7 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         main: "var(--main)",
+        "main-dark": "var(--main-dark)",
         secondary: "var(--secondary)",
         autofill: "transparent",
       },

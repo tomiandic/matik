@@ -13,7 +13,7 @@ const Button = ({
     "font-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-150 ease-in-out";
 
   const variantStyles = {
-    primary: "bg-main text-white hover:bg-main-dark focus:ring-blue-500",
+    primary: "bg-main text-white hover:bg-main-dark focus:ring-main",
     secondary: "bg-gray-500 text-white hover:bg-gray-600 focus:ring-gray-500",
     danger: "bg-red-500 text-white hover:bg-red-600 focus:ring-red-500",
     success: "bg-green-500 text-white hover:bg-green-600 focus:ring-green-500",

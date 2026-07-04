@@ -2,14 +2,15 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import { ReactLenis } from "lenis/react";
 import Navigation from "@/components/Navigation";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
-  title: "Matik - Krojački obrt u Puli",
+  title: "Matik - Tailoring Shop in Pula | Krojački obrt u Puli",
   description:
-    "Matik krojački obrt u Puli. Profesionalne usluge šivanja! Nudimo krojenje, popravke i izradu unikatnih tekstilnih proizvoda. Kvaliteta, preciznost i brza isporuka. Kontaktirajte nas danas",
+    "Professional sewing and tailoring services in Pula. We offer alterations, repairs, and custom textile products. Quality, precision, and fast delivery. Profesionalne usluge šivanja u Puli.",
   keywords:
-    "šivanje, krojenje, popravci odjeće, tekstilni proizvodi, Pula, šivaonica, krojački obrt",
+    "sewing, tailoring, clothing repairs, alterations, Pula, šivanje, krojenje, popravci odjeće, Pula, šivaonica, krojački obrt",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -17,9 +18,9 @@ export const metadata = {
     shortcut: "/favicon-32x32.png",
   },
   openGraph: {
-    title: "Najbolja Šivaonica u Puli | Kvalitetne Usluge Šivanja",
+    title: "Best Tailoring Shop in Pula | Quality Sewing Services",
     description:
-      "Profesionalne usluge šivanja u Puli - krojenje, popravci i unikatni tekstilni proizvodi. Kontaktirajte nas!",
+      "Professional sewing services in Pula — tailoring, repairs, and custom textile products. Contact us today!",
     url: "https://matik.hr",
     type: "website",
     images: [
@@ -27,7 +28,7 @@ export const metadata = {
         url: "https://images.pexels.com/photos/2973392/pexels-photo-2973392.jpeg",
         width: 1200,
         height: 630,
-        alt: "Šivaonica u Puli",
+        alt: "Tailoring shop in Pula",
       },
     ],
   },
@@ -47,8 +48,8 @@ export default function RootLayout({ children }) {
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Matik, krojački obrt u Puli",
-            "description": "Krojački obrt u Puli specijaliziran za sve vrste krojačkih popravaka. Bilo da trebate prepravke, skraćivanje ili sužavanje kod nas ćete pronaći preciznost, kvalitetu i brzinu.",
+            "name": "Matik - Tailoring Shop Pula | Krojački obrt Pula",
+            "description": "A tailoring shop in Pula specializing in all types of alterations. Whether you need adjustments, shortening, or narrowing, you'll find precision, quality, and speed with us.",
             "image": "https://images.pexels.com/photos/2973392/pexels-photo-2973392.jpeg",
             "address": {
               "@type": "PostalAddress",
@@ -72,16 +73,17 @@ export default function RootLayout({ children }) {
       </head>
       <ReactLenis
         options={{
-          duration: 1.5, // Control the duration of the scro
+          duration: 1.5,
           smooth: true,
           smoothTouch: true,
         }}
         root
       >
         <body className={`antialiased relative ${poppins.className}`}>
-          <Navigation />
-
-          {children}
+          <LanguageProvider>
+            <Navigation />
+            {children}
+          </LanguageProvider>
         </body>
       </ReactLenis>
       <GoogleAnalytics gaId="G-QWCQ5BPNB3" />

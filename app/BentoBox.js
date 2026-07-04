@@ -1,15 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import sewingMachine from "@/assets/images/sewing_machine.png";
 import tailor from "@/assets/images/tailor.png";
 import trausers from "@/assets/images/trousers.png";
 import tailorTools from "@/assets/images/tailorToolss.png";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function BentoBox() {
+  const { t } = useLanguage();
+
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-center text-2xl font-semibold text-slate-700">
-          Naše usluge
+        <h2 className="text-center text-2xl font-semibold text-slate-700 font-aboreto">
+          {t("services.heading")}
         </h2>
 
         <div className="mt-10 grid gap-4 md:gap-2 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
@@ -18,13 +23,10 @@ export default function BentoBox() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                 <h3 className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Šivanje
+                  {t("services.sewing.title")}
                 </h3>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Nudimo profesionalne usluge šivanja i krojenja po mjeri,
-                  prilagođene vašim željama i potrebama. Bilo da se radilo
-                  prepravcima, popravcima ili izradi potpuno novih odjevnih
-                  komada, garantiramo preciznost i kvalitetu.
+                  {t("services.sewing.desc")}
                 </p>
               </div>
               <div className="@container relative min-h-[14rem] w-full grow ">
@@ -44,11 +46,10 @@ export default function BentoBox() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10 z-5 min-h-64">
                 <h3 className="mt-2 text-lg font-medium tracking-tight text-gray-950  max-lg:max-w-[80%] max-lg:mr-auto">
-                  Sužavanje i širenje
+                  {t("services.alterations.title")}
                 </h3>
                 <p className="mt-2 text-sm/6 text-slate-800 max-w-[60%] max-lg:max-w-[65%] max-lg:mr-auto">
-                  Prilagođavamo odjevne komade sužavanjem ili proširivanjem kako
-                  bi savršeno pristajali vašoj figuri.
+                  {t("services.alterations.desc")}
                 </p>
               </div>
               <div className="absolute -right-6 bottom-0 max-lg:-right-25 h-full">
@@ -69,11 +70,10 @@ export default function BentoBox() {
             <div className="relative flex h-full flex-col rounded-[calc(var(--radius-lg)+1px)] min-h-56">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <h3 className="mt-2 text-lg font-medium tracking-tight text-right text-white  max-lg:w-[70%] max-lg:ml-auto">
-                  Skraćivanje
+                  {t("services.shortening.title")}
                 </h3>
                 <p className="mt-2 max-w-lg text-sm/6 text-white text-right w-2/3 ml-auto  max-lg:ml-auto">
-                  Bilo da se radi o hlačama, suknjama ili rukavima, osiguravamo
-                  uredne i profesionalne završetke.
+                  {t("services.shortening.desc")}
                 </p>
               </div>
               <div className="absolute top-5 h-full w-28 md:w-32 left-5">
@@ -94,12 +94,10 @@ export default function BentoBox() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                 <h3 className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Popravak odjeće
+                  {t("services.repairs.title")}
                 </h3>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Vršimo sve vrste popravaka odjeće bilo da se radi o zamjeni
-                  patentnog zatvarača, krpanju rupa ili učvršćivanju šavova,
-                  osiguravamo kvalitetnu i neprimjetnu izvedbu.
+                  {t("services.repairs.desc")}
                 </p>
               </div>
               <div className="@container relative min-h-[20rem] w-full grow ">

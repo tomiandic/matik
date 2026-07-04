@@ -1,10 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import logoImg from "@/assets/logo.svg";
 import LanguagePicker from "./LanguagePicker";
 import { LuPhone, LuMapPin } from "react-icons/lu";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Navigation = () => {
+  const { t } = useLanguage();
+
   return (
     <>
       <div className="flex p-2 md:hidden bg-slate-100 justify-center">
@@ -43,15 +48,15 @@ const Navigation = () => {
             </li>
             <li>
               <a
-                className="font-medium whitespace-nowrap rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-150 ease-in-out bg-main text-xs text-white hover:bg-main-dark focus:ring-blue-500 p-2 px-3 md:p-3"
+                className="font-medium whitespace-nowrap rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-150 ease-in-out bg-main hover:bg-main-dark text-xs text-white focus:ring-main p-2 px-3 md:p-3"
                 href="#contact-form"
               >
-                Kontaktirajte nas
+                {t("nav.contactUs")}
               </a>
             </li>
-            {/*  <li>
-            <LanguagePicker />
-          </li> */}
+            <li>
+              <LanguagePicker />
+            </li>
           </ul>
         </nav>
       </div>

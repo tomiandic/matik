@@ -1,15 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --main: #6a65ff;
-  --secondary: #fdffd1;
+  --main: #722f37;
+  --main-dark: #5a252c;
+  --secondary: #f5efe6;
+}
+
+.font-aboreto {
+  font-family: "Aboreto", serif;
 }
 
 body {
